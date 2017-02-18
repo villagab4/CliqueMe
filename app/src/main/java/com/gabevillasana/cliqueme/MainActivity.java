@@ -19,6 +19,9 @@ public class MainActivity extends Activity {
     private CallbackManager callbackManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //INITIALIZE FACEBOOK SDK
+        FacebookSdk.sdkInitialize(getApplicationContext());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
