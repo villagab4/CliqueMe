@@ -22,9 +22,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //INITIALIZE FACEBOOK SDK
-        FacebookSdk.sdkInitialize(getApplicationContext());
-
         //DECLARE CALLBACK METHOD
         callbackManager = CallbackManager.Factory.create();
 
