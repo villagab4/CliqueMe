@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
+import android.content.Intent;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -51,13 +52,7 @@ public class MainActivity extends Activity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                info.setText(
-                        "User ID: "
-                                + loginResult.getAccessToken().getUserId()
-                                + "\n" +
-                                "Auth Token: "
-                                + loginResult.getAccessToken().getToken()
-                );
+                launchEvents();
                 // CALL SEARCH
                 Events query = new Events(loginResult.getAccessToken());
                 query.getEventsNearMe();
@@ -78,6 +73,11 @@ public class MainActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+    public void launchEvents() {
+        Intent launchEvents = new Intent(this, EventsPage.class);
+        startActivity(launchEvents);
     }
 
 }
