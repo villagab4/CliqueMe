@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import android.content.Intent;
+import android.widget.Toast;
+
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -60,12 +62,12 @@ public class MainActivity extends Activity {
 
             @Override
             public void onCancel() {
-                info.setText("Login attempt canceled.");
+                Toast.makeText(getApplicationContext(), "Login attempt canceled.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(FacebookException e) {
-                info.setText("Login attempt failed.");
+                Toast.makeText(getApplicationContext(), "Login attempt failed.", Toast.LENGTH_SHORT).show();
             }
         });
     }
