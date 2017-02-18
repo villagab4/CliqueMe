@@ -4,6 +4,7 @@ package com.gabevillasana.cliqueme;
  * Created by gbotev on 2/18/17.
  */
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 
 import static android.R.attr.id;
 
-public class Events {
+public class Events extends Activity {
 
     private AccessToken token;
 
