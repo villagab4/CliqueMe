@@ -47,17 +47,17 @@ public class PageFragment extends android.support.v4.app.Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.page_fragment_layout, container, false);
         Bundle bundle = getArguments();
-        String message = Integer.toString(bundle.getInt("eventNum"));
+        int eventNum = bundle.getInt("eventNum");
         name = (TextView)view.findViewById(R.id.name);
-        name.setText("Name " + events.get(Integer.valueOf(message)).getName());
+        name.setText("Name " + events.get(eventNum).getName());
         date = (TextView)view.findViewById(R.id.date);
-        date.setText("Date " + events.get(Integer.valueOf(message)).getDate());
+        date.setText("Date " + events.get(eventNum).getDate());
         times = (TextView)view.findViewById(R.id.times);
-        times.setText(events.get(Integer.valueOf(message)).getStartTime() + " - " + events.get(Integer.valueOf(message)).getEndTime());
+        times.setText(events.get(eventNum).getStartTime() + " - " + events.get(eventNum).getEndTime());
         description = (TextView)view.findViewById(R.id.description);
-        description.setText("Description " + events.get(Integer.valueOf(message)).getDescription());
+        description.setText("Description " + events.get(eventNum).getDescription());
         place = (TextView)view.findViewById(R.id.place);
-        place.setText("Place " + events.get(Integer.valueOf(message)).getPlace());
+        place.setText("Place " + events.get(eventNum).getPlace());
         return  view;
     }
 
