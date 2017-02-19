@@ -6,19 +6,14 @@ package com.gabevillasana.cliqueme;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.facebook.AccessToken;
-import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import static android.R.attr.id;
 
 public class Events extends Activity {
 

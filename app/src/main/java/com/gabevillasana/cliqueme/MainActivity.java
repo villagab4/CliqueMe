@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.facebook.AccessToken;
-import android.content.Intent;
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -15,9 +13,6 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class MainActivity extends Activity {
 
