@@ -38,7 +38,18 @@
     android:text="Start - End"
     />
     <Button
-        android:id="@+id/location"
+        android:id="@+id/place"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_rounded_corners"
+        android:text="Place"
+        />
+    <Button
+        android:id="@+id/description"
         android:layout_height="wrap_content"
         android:layout_width="fill_parent"
         android:layout_gravity="center_horizontal"
