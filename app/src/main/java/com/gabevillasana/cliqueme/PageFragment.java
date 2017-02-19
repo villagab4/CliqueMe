@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class PageFragment extends android.support.v4.app.Fragment {
     TextView name;
     TextView date;
+    TextView times;
 
 
     public PageFragment() {
@@ -31,6 +32,8 @@ public class PageFragment extends android.support.v4.app.Fragment {
         name.setText("Name " + message);
         date = (TextView)view.findViewById(R.id.date);
         date.setText("Date " + message);
+        times = (TextView)view.findViewById(R.id.times);
+        times.setText("Start Time " + message + "- End Time" + message);
         return  view;
     }
 
