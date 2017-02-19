@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="background">#80D9FF</color>
+    <color name="background2">#8ECAFD</color>
+    <color name="Sounds_Fun_Button">#ff4400</color>
 </resources>

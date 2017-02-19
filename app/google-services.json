@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "560312043772",
+    "firebase_url": "https://cliqueme-3edeb.firebaseio.com",
+    "project_id": "cliqueme-3edeb",
+    "storage_bucket": "cliqueme-3edeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560312043772:android:219a3c0bf89b2620",
+        "android_client_info": {
+          "package_name": "com.gabevillasana.cliqueme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560312043772-es7ncf91m01nisg2gehu0qu1ejtgqtje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gabevillasana.cliqueme",
+            "certificate_hash": "3D697BF2438346067BB77B9C821452D50A9FA4D9"
+          }
+        },
+        {
+          "client_id": "560312043772-55ck421up32b18n4hdb7fuhbh9f4tjr5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjgaUUleg3zBhdytB_xt-YutIbcZwbILc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560312043772-55ck421up32b18n4hdb7fuhbh9f4tjr5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
