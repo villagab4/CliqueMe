@@ -13,7 +13,7 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
-import android.content.Intent;
+
 import android.widget.Toast;
 
 import com.facebook.CallbackManager;
@@ -91,21 +91,6 @@ public class MainActivity extends Activity {
             public void onSuccess(LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
                 launchEvents();
-                // CALL SEARCH
-                LocationManager manager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
-                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
-                    return;
-                }
-                Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-                User user = Events.getUserInfo();
-                Events.getNearbyEvents(location.getLatitude(), location.getLongitude());
             }
 
             @Override
