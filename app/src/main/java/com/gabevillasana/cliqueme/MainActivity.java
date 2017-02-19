@@ -30,6 +30,7 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -91,6 +92,8 @@ public class MainActivity extends Activity {
             public void onSuccess(LoginResult loginResult) {
                 handleFacebookAccessToken(loginResult.getAccessToken());
                 launchEvents();
+                //ArrayList<Event> events = Events.getNearbyEvents(39.29738, -76.59239);
+                //System.out.println(events.get(0));
             }
 
             @Override

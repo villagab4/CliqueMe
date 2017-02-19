@@ -65,6 +65,7 @@ public class Events {
                     @Override
                     public void onCompleted(GraphResponse response) {
                         try {
+                            System.out.println("HELLO");
                             JSONArray events = response.getJSONObject().getJSONArray("data");
                             for (int i = 0; i < events.length(); i++) {
                                 JSONObject currEvent = (JSONObject) events.get(i);

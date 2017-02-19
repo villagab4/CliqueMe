@@ -1,5 +1,6 @@
 package com.gabevillasana.cliqueme;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.pdf.PdfDocument;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static android.location.LocationManager.NETWORK_PROVIDER;
 import static com.facebook.FacebookSdk.getApplicationContext;
 import static com.gabevillasana.cliqueme.Events.getNearbyEvents;
 import static com.gabevillasana.cliqueme.R.layout.events;
@@ -30,20 +32,19 @@ public class PageFragment extends android.support.v4.app.Fragment {
     TextView description;
     TextView place;
 
-
     public PageFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Fetch events
-        LocationManager manager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
-        Location location = manager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-        // Obtain event list
-        ArrayList<Event> events = Events.getNearbyEvents(location.getLatitude(), location.getLongitude());
+
+        //Call method from EventsPage
+        ArrayList<Event> events = ((EventsPage)getActivity()).getEventList();
+        if (events.size() == 0) {
+            return null;
+        }
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.page_fragment_layout, container, false);
         Bundle bundle = getArguments();
@@ -59,6 +60,7 @@ public class PageFragment extends android.support.v4.app.Fragment {
         place = (TextView)view.findViewById(R.id.place);
         place.setText("Place " + events.get(eventNum).getPlace());
         return  view;
+
     }
 
 }
