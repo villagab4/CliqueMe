@@ -44,4 +44,7 @@
     <!--USER PERMISSION TO CONNECT TO FACEBOOK SERVERS -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <!--RETURNS USERS CURRENT LOCATION -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
 </manifest>
